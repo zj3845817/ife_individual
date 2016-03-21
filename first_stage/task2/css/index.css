@@ -4,7 +4,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
         margin:0;
         padding:0;
 }
-table {border-collapse:collapse;border-spacing:0;}
+table {border-collapse:collapse;border-spacing:0;width: 100%;}
 fieldset,img { border:0;}
 address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;
 font-weight:normal;}
@@ -13,6 +13,9 @@ caption,th {text-align:left;}
 q:before,q:after {content:'';}
 abbr,acronym { border:0;}
 p,ol,ul,h2,h3{-webkit-margin-before: 0; -webkit-margin-after: 0;}
+input[type="radio"], input[type="checkbox"] {
+	margin:0;
+}
 body{
 	margin:0;
 	width: 1280px;
@@ -22,6 +25,7 @@ body{
 }
 
 article{
+	padding-bottom: 5px;
 	background:#e2dfdf;
 }
 
@@ -62,7 +66,7 @@ nav ul li.active{
 }
 
 article section{
-	padding: 40px 20px;
+	padding: 30px 20px;
 	border:1px solid #ccc;
 	background: #fff;
 	box-shadow: 2px 2px 2px #484545;
@@ -127,7 +131,12 @@ section ol{
 	margin:20px 0;
 }
 
+article section:nth-child(5),article section:nth-child(6){
+	padding-bottom:20px;
+}
+
 table td,table th{
+	vertical-align: top;
 	padding-left: 5px;
 	height: 28px;
 	line-height: 28px;
@@ -140,4 +149,52 @@ table thead{
 table tfoot{
 	font-weight: bold;
 	background: #c5c4c4;
+}
+
+section:last-child table td:nth-child(odd){
+	text-align: right;
+	padding-right: 10px;
+}
+
+.tips{
+	padding: 2px 0 8px 0;
+	color: #a1a0a0;
+}
+
+textarea{
+	width: 80%;
+	height: 80px;
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #48494c;
+}
+
+input[type="submit"]{
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #2552d5;
+    color: #fff;
+    border-radius: 10px;
+}
+
+input[type="checkbox"],input[type="radio"]{
+	vertical-align: middle;
+	margin-right: 3px;
+	margin-top: 1px;
+}
+
+label{
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+footer{
+	background: #000;
+	padding:20px 0 30px 0;
+	text-align: center;
+	color: #fff;
 }
